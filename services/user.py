@@ -1,5 +1,4 @@
 from django.contrib.auth import get_user_model
-from django.contrib.auth.models import User
 
 
 def create_user(
@@ -18,7 +17,7 @@ def create_user(
     )
 
 
-def get_user(user_id: int) -> User:
+def get_user(user_id: int) -> get_user_model():
     return get_user_model().objects.get(pk=user_id)
 
 
